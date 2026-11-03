@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; script-src 'self'; worker-src 'self' blob:;" />
+  <title>terminal-retro</title>
+  <link rel="stylesheet" href="../node_modules/@xterm/xterm/css/xterm.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="rain"></canvas>
+
+  <header id="chrome">
+    <div id="drag"></div>
+    <div id="tabs"></div>
+    <button id="newtab" title="Nueva pestaña (⌘T)">+</button>
+    <div class="spacer"></div>
+    <button id="sfx" title="Sonido (⌘M)">▶</button>
+    <select id="theme" title="Tema (⌘K)"></select>
+  </header>
+
+  <main id="stage"></main>
+  <div id="scanlines"></div>
+
+  <script type="module" src="renderer.js"></script>
+</body>
+</html>
